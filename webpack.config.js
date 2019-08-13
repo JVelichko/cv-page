@@ -29,7 +29,7 @@ const fontPathConfig = isProd ? fontPathProd : fontPathDev;
 
 // The path(s) that should be cleaned
 const pathsToClean = [
-  'dist',
+  'docs',
 ];
 
 const extractSass = new ExtractTextPlugin({
@@ -73,7 +73,7 @@ var entryHtmlPlugins = Object.keys(entryPoint).filter(allKey => allKey != 'app')
 module.exports = {
   entry: entryPoint,
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'docs'),
     filename: jsFileNameConfig,
     publicPath: publicPathConfig,
   },
@@ -167,7 +167,7 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, '/dist'),
+    contentBase: path.join(__dirname, '/docs'),
     publicPath: '/',
     compress: true,
     host: '0.0.0.0',
