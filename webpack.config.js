@@ -89,10 +89,6 @@ module.exports = {
       test: /\.html$/,
       use: [{
         loader: 'html-loader',
-        // query: {
-        //   // pretty only for dev
-        //   pretty: !isProd,
-        // },
       }],
     },
     {
